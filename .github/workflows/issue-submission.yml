@@ -68,8 +68,7 @@ jobs:
 
             ### 🔍 What happens next?
 
-            @pathumzcode will manually review your submission,
-            If your submission meets all assessment requirements, @pathumzcode will close this issue after completing the review.
+            We will manually review your submission, If your submission meets all assessment requirements,close this issue after completing the review.
             Once the issue is successfully approved and closed, your **GitHub Copilot CLI Assessment Completion Badge** will be assigned automatically. 🏆
 
             Please **do not close this issue yourself**.
@@ -77,7 +76,6 @@ jobs:
             ### ⏱️ Please wait for review
 
             You don't need to take any further action unless the reviewer requests changes.
-
             Thank you for participating and completing the assessment! 🚀
 
             **GitHub Copilot CLI for Beginners**
