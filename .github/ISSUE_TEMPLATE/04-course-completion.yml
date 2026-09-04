@@ -1,5 +1,5 @@
 name: Submission
-description: Submit your GitHub Copilot CLI course completion evidence for review.
+description: Submit your GitHub Copilot CLI assessment completion evidence for review.
 title: "[SUBMISSION] Your Name"
 labels:
   - completion
@@ -11,13 +11,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        # GitHub Copilot CLI Course Completion
 
-        Thank you for completing the GitHub Copilot CLI course.
-        Please provide all required information and evidence below.
-        Your submission will be reviewed by the course maintainer before your completion badge is issued.
+        ## GitHub Copilot CLI Assessment Completion Submission
 
-        **Course Maintainer:** Pathum Lakshan Bandara (`@pathumzcode`)
+        Thank you for submitting your assessment! Please fill out the details below.
 
   - type: input
     id: full-name
@@ -32,7 +29,7 @@ body:
     id: email
     attributes:
       label: Email Address
-      description: Enter a valid email address used for the course.
+      description: Enter a valid email address used for the assessment.
       placeholder: "e.g., you@example.com"
     validations:
       required: true
@@ -59,6 +56,7 @@ body:
   - type: markdown
     attributes:
       value: |
+
         ## Hands-on Activity Evidence
 
         Please upload the required screenshots showing your hands-on work.
@@ -103,9 +101,10 @@ body:
   - type: markdown
     attributes:
       value: |
+
         ## Social Media Evidence (Optional)
 
-        Share your course experience or completion post on social media.
+        Share your assessment experience or completion post on social media.
 
         **LinkedIn:** Tag **Pathum Lakshan Bandara**
         **X:** Tag **Pathum Lakshan Bandara (`@pathumztweet`)**
@@ -127,6 +126,7 @@ body:
   - type: markdown
     attributes:
       value: |
+
         ## Reflection
 
   - type: input
@@ -168,22 +168,11 @@ body:
   - type: markdown
     attributes:
       value: |
+
         ## Submission Review
 
-        This submission will be reviewed by:
+        This submission will be reviewed by: **Pathum Lakshan Bandara (`@pathumzcode`)**
 
-        **Pathum Lakshan Bandara (`@pathumzcode`)**
+        If the submission successfully meets all assessment requirements, will approve the submission and issue the GitHub Copilot CLI assessment Completion Badge.**
 
-        The maintainer will verify:
-
-        - GitHub Copilot CLI usage
-        - Custom agent creation
-        - Task completion
-        - Hands-on activity
-        - Submitted screenshots
-        - LinkedIn and X posts
-        - Reflection responses
-
-        If the submission successfully meets all course requirements, **Pathum Lakshan Bandara (`@pathumzcode`) will approve the submission and issue the GitHub Copilot CLI Course Completion Badge.**
-
-        **Please do not close this issue yourself. The course maintainer will close the issue after completing the review.**
+        **Please do not close this issue yourself. The assessment maintainer will close the issue after completing the review.**
