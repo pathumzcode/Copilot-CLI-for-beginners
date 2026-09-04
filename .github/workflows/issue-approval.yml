@@ -133,12 +133,8 @@ jobs:
             ### ✅ Assessment Status
 
             **Status:** 🟢 Approved
-
             **Reviewed by:** @pathumzcode
-
             **Assessment:** GitHub Copilot CLI for Beginners
-
-            You have successfully completed the required hands-on activities and provided the required assessment evidence.
 
             ---
 
@@ -153,12 +149,11 @@ jobs:
             ### 💙 Thank You!
 
             Thank you for participating in the **GitHub Copilot CLI for Beginners Assessment**.
-
             We appreciate your effort, participation, and willingness to learn.
 
-            Keep exploring GitHub Copilot CLI, custom agents, and AI-powered development workflows! 🚀
+            Follow me for more updates - https://github.com/pathumzcode
 
-            **Happy Coding! 💻✨**
+            **Happy Coding! ✨**
             `;
 
             await github.rest.issues.createComment({
