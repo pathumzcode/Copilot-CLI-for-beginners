@@ -1,12 +1,9 @@
 name: Submission
 description: Submit your GitHub Copilot CLI course completion evidence for review.
-title: "[SUBMISSION] "
+title: "[SUBMISSION] Your Name"
 labels:
   - completion
   - review-required
-  - course
-  - copilot-cli
-  - hands-on
 assignees:
   - pathumzcode
 
@@ -17,9 +14,7 @@ body:
         # GitHub Copilot CLI Course Completion
 
         Thank you for completing the GitHub Copilot CLI course.
-
         Please provide all required information and evidence below.
-
         Your submission will be reviewed by the course maintainer before your completion badge is issued.
 
         **Course Maintainer:** Pathum Lakshan Bandara (`@pathumzcode`)
@@ -47,7 +42,7 @@ body:
     attributes:
       label: University / Institution
       description: Enter your university, institution, or organization.
-      placeholder: "e.g., SLIIT"
+      placeholder: "e.g. SLIIT"
     validations:
       required: true
 
@@ -94,7 +89,7 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     id: hands-on-activity
     attributes:
       label: Hands-on Activity
@@ -103,54 +98,15 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: agent-name
-    attributes:
-      label: Custom Agent Name
-      description: Enter the name of your custom agent.
-      placeholder: "e.g., ProjectAssistant"
-    validations:
-      required: true
-
-  - type: textarea
-    id: agent-description
-    attributes:
-      label: Custom Agent Description
-      description: Briefly explain what your custom agent does.
-      placeholder: "Explain the purpose and capabilities of your custom agent."
-    validations:
-      required: true
-
-  - type: textarea
-    id: assigned-task
-    attributes:
-      label: Task Given to the Agent
-      description: Describe the task you assigned to your custom agent.
-      placeholder: "Describe the task you gave to the agent."
-    validations:
-      required: true
-
-  - type: textarea
-    id: result
-    attributes:
-      label: Result
-      description: Explain the result produced by your custom agent.
-      placeholder: "Describe the result produced by the agent."
-    validations:
-      required: true
-
   - type: markdown
     attributes:
       value: |
-        ## Social Media Evidence
+        ## Social Media Evidence (Optional)
 
         Share your course experience or completion post on social media.
 
         **LinkedIn:** Tag **Pathum Lakshan Bandara**
-
         **X:** Tag **Pathum Lakshan Bandara (`@pathumztweet`)**
-
-        Please ensure your posts are publicly accessible so they can be verified.
 
   - type: input
     id: linkedin
@@ -171,24 +127,20 @@ body:
       value: |
         ## Reflection
 
-  - type: textarea
+  - type: input
     id: learning
     attributes:
       label: What did you learn from this activity?
       description: Explain the key concepts, commands, or skills you learned.
       placeholder: "Describe what you learned."
-    validations:
-      required: true
 
-  - type: textarea
+  - type: input
     id: real-world-use
     attributes:
       label: How could you use GitHub Copilot CLI or custom agents in a real-world workflow?
       description: Describe a practical use case.
       placeholder: "Explain how you could apply these skills in a real-world development workflow."
-    validations:
-      required: true
-
+      
   - type: checkboxes
     id: checklist
     attributes:
