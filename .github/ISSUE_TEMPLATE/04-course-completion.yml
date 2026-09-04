@@ -97,7 +97,6 @@ body:
     validations:
       required: true
 
-
   - type: markdown
     attributes:
       value: |
@@ -173,6 +172,6 @@ body:
 
         This submission will be reviewed by: **Pathum Lakshan Bandara (`@pathumzcode`)**
 
-        If the submission successfully meets all assessment requirements, will approve the submission and issue the GitHub Copilot CLI assessment Completion Badge.**
+        If the submission successfully meets all assessment requirements, will approve the submission and issue the GitHub Copilot CLI assessment Completion Badge.
 
         **Please do not close this issue yourself. The assessment maintainer will close the issue after completing the review.**
