@@ -4,7 +4,7 @@ Welcome to the **GitHub Copilot CLI for Beginners** practice repository! This re
 
 ![Banner](images/banner.png)
 
-# ❇️ You will explore here.
+## ❇️ You will explore here.
 
 - Use GitHub Copilot CLI
 - Create custom agents

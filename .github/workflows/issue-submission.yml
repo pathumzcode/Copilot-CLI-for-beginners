@@ -57,28 +57,20 @@ jobs:
             Hi @${student}! 👋
 
             Thank you for submitting your **GitHub Copilot CLI for Beginners Assessment**.
+            Your submission has been successfully received.
 
-            Your submission has been successfully received and is now:
+            ### ⌛ Assessment Status
 
-            ### ⏳ Pending Review
-
-            **Status:** 🟡 Review Required
-
+            **Status:** 🟡 Pending Review
             **Reviewer:** @pathumzcode
+            **Expected Review Time**: 2-5 days
 
             ### 🔍 What happens next?
 
-            We will manually review your submission, If your submission meets all assessment requirements,close this issue after completing the review.
-            Once the issue is successfully approved and closed, your **GitHub Copilot CLI Assessment Completion Badge** will be assigned automatically. 🏆
+            We will manually review your submission.
+            If your submission meets all assessment requirements, issue is successfully approved and closed, your **GitHub Copilot CLI Assessment Completion Badge** will be assigned automatically. 🏆
 
-            Please **do not close this issue yourself**.
-
-            ### ⏱️ Please wait for review
-
-            You don't need to take any further action unless the reviewer requests changes.
-            Thank you for participating and completing the assessment! 🚀
-
-            **GitHub Copilot CLI for Beginners**
+            Follow me for more updates - https://github.com/pathumzcode
             `;
 
             await github.rest.issues.createComment({
