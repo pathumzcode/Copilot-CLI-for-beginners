@@ -103,4 +103,4 @@ copilot --version
 ```
 #### Output:
 
-![Installed](images\installed.png)
+![GitHub Copilot CLI Installation](images/installed.png)
