@@ -4,6 +4,24 @@ Welcome to the **GitHub Copilot CLI for Beginners** practice repository! This re
 
 ![Banner](images/banner.png)
 
+## 🚀 Introduction and Overview
+
+GitHub Copilot CLI brings the power of **GitHub Copilot directly to your terminal**. It allows you to work with an AI coding agent without leaving your command line.
+
+With GitHub Copilot CLI, you can:
+
+- ✅ **Work from the terminal** - Use Copilot directly from your command line.
+- ✅ **Connect with GitHub** - Work with repositories, issues, and pull requests using natural language.
+- ✅ **Get AI assistance** - Ask Copilot to create, edit, debug, explain, and improve your code.
+- ✅ **Extend its capabilities** - Use MCP servers to connect Copilot with additional tools and services.
+- ✅ **Stay in control** - Review and approve actions before Copilot executes them.
+
+### 🎯 What We'll Learn
+
+In this assessment, we'll start from the basics and gradually learn how to use **GitHub Copilot CLI** effectively in the terminal.
+
+> **💡 Beginner Tip:** You don't need to be an expert to get started. Follow each step carefully and try the commands yourself.
+
 ## ❇️ You will explore here.
 
 - Use GitHub Copilot CLI
@@ -11,7 +29,7 @@ Welcome to the **GitHub Copilot CLI for Beginners** practice repository! This re
 - Automate tasks
 - Apply AI-assisted development
 
-## 📍 Prerequisites
+## 📍 Prerequisites.
 
 Before starting, make sure you have the following:
 
@@ -27,3 +45,62 @@ Before starting, make sure you have the following:
 | **Internet connection** | Required to communicate with GitHub services |
 
 > **Note:** A **GitHub Copilot subscription is not required for basic GitHub CLI usage**. It is only needed if you specifically uses **GitHub Copilot CLI features**.
+
+## 🎯 Getting Started.
+
+### Step 01 - Create a Project Folder
+
+Before installing and using GitHub Copilot CLI, it is recommended to create a **dedicated folder** for this assessment.
+
+#### Example For Windows
+ ```
+1. Create a new folder on your Desktop.
+2. Give it a meaningful name, for example:
+GitHub Copilot CLI
+```
+
+Then, Navigate to the folder. Open PowerShell or Command Prompt and run the following command:
+
+```powershell
+cd Desktop\GitHub Copilot CLI
+```
+
+### Step 02 - Install GitHub Copilot CLI
+
+After creating your assessment folder, the next step is to install GitHub Copilot CLI.
+
+### Install with Homebrew (macOS and Linux):
+
+```powershell
+brew install copilot-cli
+```
+```powershell
+brew install copilot-cli@prerelease
+```
+
+### Install with WinGet (Windows):
+
+```powershell
+winget install GitHub.Copilot
+```
+```powershell
+winget install GitHub.Copilot.Prerelease
+```
+
+### Install with npm (macOS, Linux, and Windows):
+
+```powershell
+npm install -g @github/copilot
+```
+```powershell
+npm install -g @github/copilot@prerelease
+```
+
+### Then verify the installation:
+
+```powershell
+copilot --version
+```
+#### Output:
+
+![Installed](images\installed.png)
