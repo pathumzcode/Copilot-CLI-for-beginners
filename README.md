@@ -69,7 +69,7 @@ cd Desktop\GitHub Copilot CLI
 
 After creating your assessment folder, the next step is to install GitHub Copilot CLI.
 
-### Install with Homebrew (macOS and Linux):
+#### Homebrew (macOS and Linux):
 
 ```powershell
 brew install copilot-cli
@@ -78,7 +78,7 @@ brew install copilot-cli
 brew install copilot-cli@prerelease
 ```
 
-### Install with WinGet (Windows):
+#### WinGet (Windows):
 
 ```powershell
 winget install GitHub.Copilot
@@ -87,7 +87,7 @@ winget install GitHub.Copilot
 winget install GitHub.Copilot.Prerelease
 ```
 
-### Install with npm (macOS, Linux, and Windows):
+#### npm (macOS, Linux, and Windows):
 
 ```powershell
 npm install -g @github/copilot
@@ -96,7 +96,7 @@ npm install -g @github/copilot
 npm install -g @github/copilot@prerelease
 ```
 
-### Then verify the installation:
+#### Verify the installation:
 
 ```powershell
 copilot --version
