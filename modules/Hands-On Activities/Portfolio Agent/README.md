@@ -25,7 +25,7 @@ By completing this activity, you will learn how to:
 | ----------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------- |
 | [Step 01](#step-01---prepare-the-workshop-project)          | Prepare the Workshop Project          | Create or open the project used for the activity.              |
 | [Step 02](#step-02---create-the-agent-directory)            | Create the Agent Directory            | Create `.github/agents/` for the custom Agent.                 |
-| [Step 03](#step-03---create-the-portfolio-generation-agent) | Create the Portfolio Generation Agent | Add the provided Agent configuration.                          |
+| [Step 03](#step-03---create-the-portfolio-generation-agent) | Create the Portfolio Generation Agent | Add the provided Agent configuration. |
 | [Step 04](#step-04---create-the-skill-directory)            | Create the Skill Directory            | Create the directory for the Portfolio Generation Skill.       |
 | [Step 05](#step-05---create-the-skillmd)                    | Create the `SKILL.md`                 | Add the detailed portfolio-generation instructions.            |
 | [Step 06](#step-06---start-github-copilot-cli)              | Start GitHub Copilot CLI              | Launch Copilot CLI and load the Agent and Skill.               |
@@ -116,7 +116,7 @@ This repository provides a **Portfolio Generation Agent** configuration.
 
 The provided Agent resource is located in the workshop repository:
 
-[Open `portfolio-generation.agent.md`](../../../resources/Portfolio%20Generation%20Agent/portfolio-generation.agent.md)
+[Open `portfolio-generation.agent.md`](resources/Portfolio%20Generation%20Agent/portfolio-generation.agent.md)
 
 Copy the provided Agent configuration into the project-level `.github/agents/` directory.
 
@@ -165,7 +165,7 @@ This repository provides a **SKILL** configuration.
 
 The provided SKILL resource is located in the workshop repository:
 
-[Open `SKILL.md`](../../../resources/Portfolio%20Generation%20Agent/SKILL.md)
+[Open `SKILL.md`](resources/Portfolio%20Generation%20Agent/SKILL.md)
 
 
 Copy the provided Portfolio Generation Skill instructions into the file.
@@ -181,32 +181,6 @@ Portfolio-Agent/
         └── portfolio-generation/
             └── SKILL.md
 ```
-
-    Start Copilot CLI again and select the Portfolio Generation Agent. Ask it to analyze the CV before creating anything:
-
-    ```text
-    I have provided my CV in this project.
-
-    Read and analyze my CV according to the Portfolio Generation Agent and portfolio-generation skill.
-
-    Do not create the portfolio yet.
-
-    Summarize only information supported by my CV, including:
-
-    - Name and professional summary
-    - Education
-    - Technical skills, programming languages, and frameworks
-    - Databases, cloud, AI/ML, and development tools
-    - Projects
-    - Experience
-    - Certifications and achievements
-    - GitHub, LinkedIn, and other professional links
-
-    Identify missing, unclear, or ambiguous information instead of guessing.
-    Wait for my confirmation before creating the portfolio.
-    ```
-
-    Review the extracted information carefully and confirm that it is accurate before continuing.
 
 ---
 
@@ -228,14 +202,6 @@ copilot
 
 You should now be inside the Copilot CLI environment.
 
-Reload and inspect the available Skills:
-
-```text
-/skills reload
-/skills list
-/skills info portfolio-generation
-```
-
 ---
 
 <a id="step-07---verify-the-agent-and-skill"></a>
@@ -252,23 +218,6 @@ Select:
 
 ```text
 portfolio-agent
-```
-
-Ask the Agent to explain how it will use the Skill before it changes any files:
-
-```text
-Before making any changes, explain how you will create my portfolio.
-
-Explain:
-
-1. What information you will extract from my CV.
-2. What portfolio sections you will create.
-3. How the portfolio-generation skill will guide your work.
-4. How you will make the website responsive.
-5. How you will prevent inaccurate or invented information.
-6. How you will protect existing project files.
-
-Do not create or modify the website yet.
 ```
 ---
 <a id="step-08---provide-and-analyze-your-cv"></a>
@@ -316,7 +265,7 @@ Select the Portfolio Generation Agent:
 /agent
 ```
 
-After analyzing the CV and confirming that the extracted information is accurate, provide the following prompt:
+After analysis the CV and confirming that the extracted information is accurate, provide the following prompt:
 
 ```text
 Using the verified information from my CV and following the portfolio-generation skill, create my professional personal portfolio website.
@@ -469,60 +418,10 @@ Review the changes proposed by Copilot before approving them.
 
 ## Step 12 - Final Testing and Evidence
 
-Before completing the activity, verify the final portfolio:
-
-- Confirm all personal, education, skills, project, certification, experience, and achievement information comes from the verified CV.
-- Test Home, About, Education, Skills, Projects, Certifications, Experience, GitHub, LinkedIn, and Contact sections when available.
-- Test navigation, links, buttons, images, and contact actions.
-- Check desktop, laptop, tablet, and mobile layouts.
-- Check accessibility, readable text, focus states, and missing alt text.
-- Check for broken assets, broken links, and obvious console errors.
-
-### Required Evidence
-
-Capture evidence of:
-
-- Copilot CLI with the Portfolio Generation Agent selected
-- The Agent and Skill verification
-- CV analysis and confirmation
-- The implementation plan
-- Portfolio generation
-- Portfolio review and approved improvements
-- Final responsive portfolio and testing results
-
-### Reflection
-
-Answer these questions after completing the activity:
-
-1. What is a custom Agent, and how did you use it?
-2. What is the purpose of `SKILL.md`?
-3. What is the difference between an Agent and a Skill?
-4. How did the Agent use your CV?
-5. How did your instructions influence the portfolio?
-6. What improvements did the Agent make?
-7. What are the benefits and limitations of AI-assisted development?
-8. Why must portfolio information remain accurate?
-9. Why is it useful to separate Agent configuration from Skill instructions?
-
-### Expected Project Structure
-
-```text
-Portfolio-Agent/
-├── CV.pdf
-├── .github/
-│   ├── agents/
-│   │   └── portfolio-generation.agent.md
-│   └── skills/
-│       └── portfolio-generation/
-│           └── SKILL.md
-└── portfolio/
-    └── generated portfolio files
-```
-
-The exact portfolio files depend on the approved implementation plan and the user's CV.
+Before completing the activity, verify the portfolio.
 
 ---
 
-## Learning Outcome
+# 🎓 Learning Outcome
 
 After completing this activity, participants should understand how to combine a **custom GitHub Copilot CLI Agent** with a reusable **Skill** to perform a structured AI-assisted development workflow.
