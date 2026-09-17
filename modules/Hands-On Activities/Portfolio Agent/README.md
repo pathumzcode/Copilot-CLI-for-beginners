@@ -182,6 +182,32 @@ Portfolio-Agent/
             └── SKILL.md
 ```
 
+    Start Copilot CLI again and select the Portfolio Generation Agent. Ask it to analyze the CV before creating anything:
+
+    ```text
+    I have provided my CV in this project.
+
+    Read and analyze my CV according to the Portfolio Generation Agent and portfolio-generation skill.
+
+    Do not create the portfolio yet.
+
+    Summarize only information supported by my CV, including:
+
+    - Name and professional summary
+    - Education
+    - Technical skills, programming languages, and frameworks
+    - Databases, cloud, AI/ML, and development tools
+    - Projects
+    - Experience
+    - Certifications and achievements
+    - GitHub, LinkedIn, and other professional links
+
+    Identify missing, unclear, or ambiguous information instead of guessing.
+    Wait for my confirmation before creating the portfolio.
+    ```
+
+    Review the extracted information carefully and confirm that it is accurate before continuing.
+
 ---
 
 <a id="step-06---start-github-copilot-cli"></a>
@@ -443,14 +469,60 @@ Review the changes proposed by Copilot before approving them.
 
 ## Step 12 - Final Testing and Evidence
 
-Before completing the activity, verify the final portfolio by checking all relevant sections, including 
+Before completing the activity, verify the final portfolio:
 
-- Home, About, Education, Languages & Technical Skills, Projects, Certifications & Achievements, Experience, Extra-Curricular Activities, GitHub, LinkedIn, and Contact. 
-- Ensure that the content is accurate and based only on the verified CV, with no invented information. 
-- Test the navigation, links, buttons, images, responsiveness, and overall functionality across desktop, tablet, and mobile devices. 
+- Confirm all personal, education, skills, project, certification, experience, and achievement information comes from the verified CV.
+- Test Home, About, Education, Skills, Projects, Certifications, Experience, GitHub, LinkedIn, and Contact sections when available.
+- Test navigation, links, buttons, images, and contact actions.
+- Check desktop, laptop, tablet, and mobile layouts.
+- Check accessibility, readable text, focus states, and missing alt text.
+- Check for broken assets, broken links, and obvious console errors.
+
+### Required Evidence
+
+Capture evidence of:
+
+- Copilot CLI with the Portfolio Generation Agent selected
+- The Agent and Skill verification
+- CV analysis and confirmation
+- The implementation plan
+- Portfolio generation
+- Portfolio review and approved improvements
+- Final responsive portfolio and testing results
+
+### Reflection
+
+Answer these questions after completing the activity:
+
+1. What is a custom Agent, and how did you use it?
+2. What is the purpose of `SKILL.md`?
+3. What is the difference between an Agent and a Skill?
+4. How did the Agent use your CV?
+5. How did your instructions influence the portfolio?
+6. What improvements did the Agent make?
+7. What are the benefits and limitations of AI-assisted development?
+8. Why must portfolio information remain accurate?
+9. Why is it useful to separate Agent configuration from Skill instructions?
+
+### Expected Project Structure
+
+```text
+Portfolio-Agent/
+├── CV.pdf
+├── .github/
+│   ├── agents/
+│   │   └── portfolio-generation.agent.md
+│   └── skills/
+│       └── portfolio-generation/
+│           └── SKILL.md
+└── portfolio/
+    └── generated portfolio files
+```
+
+The exact portfolio files depend on the approved implementation plan and the user's CV.
 
 ---
 
-# 🎓 Learning Outcome
+## Learning Outcome
 
 After completing this activity, participants should understand how to combine a **custom GitHub Copilot CLI Agent** with a reusable **Skill** to perform a structured AI-assisted development workflow.
