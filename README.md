@@ -104,3 +104,7 @@ copilot --version
 #### Output:
 
 ![GitHub Copilot CLI Installation](images/installed.png)
+
+## 🎯 Hands-On Activities.
+
+

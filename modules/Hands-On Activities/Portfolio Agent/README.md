@@ -25,7 +25,7 @@ By completing this activity, you will learn how to:
 | ----------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------- |
 | [Step 01](#step-01---prepare-the-workshop-project)          | Prepare the Workshop Project          | Create or open the project used for the activity.              |
 | [Step 02](#step-02---create-the-agent-directory)            | Create the Agent Directory            | Create `.github/agents/` for the custom Agent.                 |
-| [Step 03](#step-03---create-the-portfolio-generation-agent) | Create the Portfolio Generation Agent | Add the provided Agent configuration. |
+| [Step 03](#step-03---create-the-agent) | Create the Portfolio Generation Agent | Add the provided Agent configuration.                          |
 | [Step 04](#step-04---create-the-skill-directory)            | Create the Skill Directory            | Create the directory for the Portfolio Generation Skill.       |
 | [Step 05](#step-05---create-the-skillmd)                    | Create the `SKILL.md`                 | Add the detailed portfolio-generation instructions.            |
 | [Step 06](#step-06---start-github-copilot-cli)              | Start GitHub Copilot CLI              | Launch Copilot CLI and load the Agent and Skill.               |
@@ -116,9 +116,9 @@ This repository provides a **Portfolio Generation Agent** configuration.
 
 The provided Agent resource is located in the workshop repository:
 
-[Open `portfolio-generation.agent.md`](resources/Portfolio%20Generation%20Agent/portfolio-generation.agent.md)
+[Open `agent.md`](resources/Portfolio%20Generation%20Agent/agent.md)
 
-Copy the provided Agent configuration into the project-level `.github/agents/` directory.
+Copy the provided Agent configuration into `agents` file.
 
 Expected structure:
 
@@ -126,7 +126,7 @@ Expected structure:
 Portfolio-Agent/
 └── .github/
     └── agents/
-        └── portfolio-generation.agent.md
+        └── agent.md
 ```
 
 ---
@@ -141,7 +141,6 @@ Create the Skill directory:
 
 ```powershell
 mkdir .github\skills
-mkdir .github\skills\portfolio-generation
 ```
 
 Expected structure:
@@ -150,9 +149,8 @@ Expected structure:
 Portfolio-Agent/
 └── .github/
     ├── agents/
-    │   └── portfolio-generation.agent.md
-    └── skills/
-        └── portfolio-generation/
+    │   └── agent.md
+    └── skills
 ```
 
 ---
@@ -176,10 +174,9 @@ The final location must be:
 Portfolio-Agent/
 └── .github/
     ├── agents/
-    │   └── portfolio-generation.agent.md
-    └── skills/
-        └── portfolio-generation/
-            └── SKILL.md
+    │   └── agent.md
+    └── skills
+        └── SKILL.md
 ```
 
 ---
