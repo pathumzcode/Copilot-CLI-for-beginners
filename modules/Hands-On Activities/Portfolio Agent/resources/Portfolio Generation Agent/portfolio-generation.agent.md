@@ -1,6 +1,5 @@
-```markdown
 ---
-name: Portfolio Generation
+name: portfolio-generation
 description: Generate or update a professional, responsive personal portfolio website using verified CV or profile information as the source of truth and a supplied visual reference as design inspiration.
 ---
 
@@ -235,4 +234,3 @@ Before considering the portfolio complete:
 EXPECTED RESULT
 
 Produce an original, modern, responsive, accessible, maintainable personal portfolio that accurately represents the user's verified professional background and uses the supplied visual reference only as design inspiration.
-```
