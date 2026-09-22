@@ -16,7 +16,7 @@ With GitHub Copilot CLI, you can:
 - ✅ **Extend its capabilities** - Use MCP servers to connect Copilot with additional tools and services.
 - ✅ **Stay in control** - Review and approve actions before Copilot executes them.
 
-### 🎯 What We'll Learn
+### ✨ What We'll Learn
 
 In this assessment, we'll start from the basics and gradually learn how to use **GitHub Copilot CLI** effectively in the terminal.
 
@@ -105,7 +105,54 @@ copilot --version
 
 ![GitHub Copilot CLI Installation](images/installed.png)
 
-# 🤝Hands-On Activity & Submission Guide
+
+# 🛠️ Hands-On Activity Guide
+
+Once you have completed the required setup, continue with the **Portfolio Agent Hands-On Activity**.
+
+In this activity, you will build and use a custom GitHub Copilot agent to generate a professional portfolio from verified information provided in a CV. You will work with custom agents, skills, project structure, and GitHub Copilot CLI.
+
+[Start the Portfolio Agent Hands-On Activity](<modules/Hands-On Activities/Portfolio Agent/README.md>)
+
+# 🏆 Hands-On Activity Completion & Badge Submission
+
+If you have successfully completed the required hands-on activity, you can submit your completion details using the submission form below.
+
+### 📝 Submit Your Completion
+
+[Submit Your Completion Form](https://github.com/pathumzcode/Copilot-CLI-for-beginners/issues/new?template=04-course-completion.yml)
+
+### 🛑 Before Submitting
+
+Please make sure you have:
+
+- ✅ Completed the required hands-on activity
+- ✅ Followed the instructions in the activity guide
+- ✅ Completed all required tasks
+- ✅ Provided the requested information and evidence
+- ✅ Submitted your GitHub profile or repository details where required
+
+### 🏅 Earn Your Shareable Badge
+
+Participants who successfully complete the hands-on activity are eligible to receive the **GitHub Copilot CLI for Beginners – Hands-On Learner Badge**.
+
+<p align="center">
+  <img src="images/badge.png" alt="GitHub Copilot CLI for Beginners Badge" width="250">
+</p>
+
+### 📌 Submission Review
+
+After submitting your completion form, your submission will be reviewed based on the activity requirements.
+
+Please ensure that all submitted information is accurate and complete.
+
+---
+
+### 🚀 Keep Learning & Building!
+
+Thank you for participating in **GitHub Copilot CLI for Beginners**.
+
+**Learn. Build. Create with GitHub Copilot CLI. 🤖💻**
 
 
 
