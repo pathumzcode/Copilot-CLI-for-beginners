@@ -105,6 +105,8 @@ copilot --version
 
 ![GitHub Copilot CLI Installation](images/installed.png)
 
-## 🎯 Hands-On Activities.
+# 🤝Hands-On Activity & Submission Guide
+
+
 
 

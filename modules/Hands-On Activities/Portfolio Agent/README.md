@@ -7,34 +7,28 @@ The agent will analyze a user's CV or profile information and use the verified i
 By completing this activity, you will learn how to:
 
 * Create a custom GitHub Copilot CLI Agent
-* Create a reusable `SKILL.md`
-* Understand the difference between an Agent and a Skill
 * Run a custom Agent using GitHub Copilot CLI
 * Provide a CV as input
 * Analyze CV information
 * Generate a professional portfolio website
-* Review and improve an AI-generated portfolio
-* Validate the final website
+* Review an AI-generated portfolio
 * Work safely with AI-assisted development
 
 ---
 
 # 📚 Content
 
-| Step                                                        | Activity                              | Description                                                    |
-| ----------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------- |
-| [Step 01](#step-01---prepare-the-workshop-project)          | Prepare the Workshop Project          | Create or open the project used for the activity.              |
-| [Step 02](#step-02---create-the-agent-directory)            | Create the Agent Directory            | Create `.github/agents/` for the custom Agent.                 |
-| [Step 03](#step-03---create-the-agent) | Create the Portfolio Generation Agent | Add the provided Agent configuration.                          |
-| [Step 04](#step-04---create-the-skill-directory)            | Create the Skill Directory            | Create the directory for the Portfolio Generation Skill.       |
-| [Step 05](#step-05---create-the-skillmd)                    | Create the `SKILL.md`                 | Add the detailed portfolio-generation instructions.            |
-| [Step 06](#step-06---start-github-copilot-cli)              | Start GitHub Copilot CLI              | Launch Copilot CLI and load the Agent and Skill.               |
-| [Step 07](#step-07---verify-the-agent-and-skill)            | Verify the Agent and Skill            | Confirm that the custom Agent and Skill are available.         |
-| [Step 08](#step-08---provide-and-analyze-your-cv)           | Provide and Analyze Your CV           | Give the CV to the Agent and verify the extracted information. |
-| [Step 09](#step-09---generate-the-portfolio)                | Generate the Portfolio                | Create the portfolio from the verified CV information.         |
-| [Step 10](#step-10---review-the-portfolio)                  | Review the Portfolio                  | Ask the Agent to inspect the generated website.                |
-| [Step 11](#step-11---improve-the-portfolio)                 | Improve the Portfolio                 | Apply approved improvements.                                   |
-| [Step 12](#step-12---final-testing-and-evidence)            | Final Testing and Evidence            | Test the website and capture required evidence.                |
+| Step                                                        | Activity                              | Description                                                                          |
+| ----------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Step 01](#step-01---start-copilot-cli)                     | Start GitHub Copilot CLI              | Launch GitHub Copilot CLI.                                                           |
+| [Step 02](#step-02---check-your-custom-agents)              | Check Your Custom Agents              | Check the available custom agents.                                                   |
+| [Step 03](#step-03---create-your-agent-through-the-cli)     | Create the Portfolio Generation Agent | Create the custom Agent using the Copilot CLI.                                       |
+| [Step 04](#step-04---check-the-custom-agent)                | Check the Custom Agent                | Confirm that the Portfolio Generation Agent is available.                            |
+| [Step 05](#step-05---startrestart-github-copilot-cli)       | Start/Restart GitHub Copilot CLI      | Start or restart Copilot CLI after creating the Agent.                               |
+| [Step 06](#step-06---select-the-portfolio-generation-agent) | Select the Portfolio Generation Agent | Select the custom Agent from the `/agent` menu.                                      |
+| [Step 07](#step-07---provide-and-analyze-your-cv)           | Provide and Analyze Your CV           | Provide your CV and verify the information identified by the Agent.                  |
+| [Step 08](#step-08---generate-the-portfolio)                | Generate the Portfolio                | Generate the portfolio using the verified CV information.                            |
+| [Step 09](#step-09---review-the-portfolio)                  | Review the Portfolio                  | Ask the Agent to review the generated portfolio and identify important improvements. |
 
 ---
 
@@ -44,381 +38,245 @@ Complete this activity using **GitHub Copilot CLI**.
 
 You should understand and review the commands, plans, file changes, and code proposed by the AI before approving them.
 
-Do not blindly approve AI-generated changes.
-
-## 🛠️ Step-by-Step Activities
-
-<a id="step-01---prepare-the-workshop-project"></a>
-
-## Step 01 - Prepare the Workshop Project
-
-Create or open a dedicated project folder for this activity.
-
-For example:
-
-```powershell
-mkdir Portfolio-Agent
-cd Portfolio-Agent
-```
-
-Open the project in Visual Studio Code:
-
-```powershell
-code .
-```
-
-Your project can initially be empty.
-
-Expected structure:
-
-```text
-Portfolio-Agent/
-```
+**Do not blindly approve AI-generated changes.**
 
 ---
 
-<a id="step-02---create-the-agent-directory"></a>
+# 🛠️ Step-by-Step Activities
 
-## Step 02 - Create the Agent Directory
+## Step 01 - Start Copilot CLI
 
-Custom Agents are stored inside the project's `.github/agents` directory.
-
-Create the required directories:
-
-```powershell
-mkdir .github
-mkdir .github\agents
-```
-
-You can verify the directory:
-
-```powershell
-Get-ChildItem .github
-```
-
-Expected structure:
-
-```text
-Portfolio-Agent/
-└── .github/
-    └── agents/
-```
-
-> **Important:** Do not assume that GitHub Copilot CLI will automatically create `.github/agents` when it is launched for the first time.
-
----
-
-<a id="step-03---create-the-portfolio-generation-agent"></a>
-
-## Step 03 - Create the Portfolio Generation Agent
-
-This repository provides a **Portfolio Generation Agent** configuration.
-
-The provided Agent resource is located in the workshop repository:
-
-[Open `agent.md`](resources/Portfolio%20Generation%20Agent/agent.md)
-
-Copy the provided Agent configuration into `agents` file.
-
-Expected structure:
-
-```text
-Portfolio-Agent/
-└── .github/
-    └── agents/
-        └── agent.md
-```
-
----
-
-<a id="step-04---create-the-skill-directory"></a>
-
-## Step 04 - Create the Skill Directory
-
-The Portfolio Generation Skill will be stored separately from the Agent.
-
-Create the Skill directory:
-
-```powershell
-mkdir .github\skills
-```
-
-Expected structure:
-
-```text
-Portfolio-Agent/
-└── .github/
-    ├── agents/
-    │   └── agent.md
-    └── skills
-```
-
----
-
-<a id="step-05---create-the-skillmd"></a>
-
-## Step 05 - Create the `SKILL.md`
-
-This repository provides a **SKILL** configuration.
-
-The provided SKILL resource is located in the workshop repository:
-
-[Open `SKILL.md`](resources/Portfolio%20Generation%20Agent/SKILL.md)
-
-
-Copy the provided Portfolio Generation Skill instructions into the file.
-
-The final location must be:
-
-```text
-Portfolio-Agent/
-└── .github/
-    ├── agents/
-    │   └── agent.md
-    └── skills
-        └── SKILL.md
-```
-
----
-
-<a id="step-06---start-github-copilot-cli"></a>
-
-## Step 06 - Start GitHub Copilot CLI
-
-Make sure you are in the project root:
-
-```powershell
-cd Portfolio-Agent
-```
-
-Start GitHub Copilot CLI:
+Run GitHub Copilot CLI using the command below:
 
 ```powershell
 copilot
 ```
 
-You should now be inside the Copilot CLI environment.
+The `copilot` command launches the interactive GitHub Copilot CLI.
 
 ---
 
-<a id="step-07---verify-the-agent-and-skill"></a>
+## Step 02 - Check Your Custom Agents
 
-## Step 07 - Verify the Agent and Skill
-
-Open the available custom Agents:
+Once Copilot opens, type:
 
 ```text
 /agent
 ```
 
-Select:
+This opens the Agent selector and shows the available custom agents.
 
-```text
-portfolio-agent
-```
----
-<a id="step-08---provide-and-analyze-your-cv"></a>
+If you have not created any custom agents yet, the list may be empty.
 
-## Step 08 - Provide and Analyze Your CV
 
-Exit Copilot CLI:
-
-```text
-/exit
-```
-
-Place your CV inside the project root.
-
-For example:
-
-```text
-Portfolio-Agent/
-│
-├── CV.pdf
-│
-└── .github/
-    ├── agents/
-    │   └── portfolio-generation.agent.md
-    │
-    └── skills/
-        └── portfolio-generation/
-            └── SKILL.md
-```
----
-
-<a id="step-09---generate-the-portfolio"></a>
-
-## Step 09 - Generate the Portfolio
-
-Start Copilot CLI again:
-
-```powershell
-copilot
-```
-
-Select the Portfolio Generation Agent:
-
-```text
-/agent
-```
-
-After analysis the CV and confirming that the extracted information is accurate, provide the following prompt:
-
-```text
-Using the verified information from my CV and following the portfolio-generation skill, create my professional personal portfolio website.
-
-Requirements:
-
-1. Use my CV as the primary source of information.
-
-2. Do not invent any personal, educational, professional, project, certification, achievement, or technical information.
-
-3. Create appropriate sections based on the information available in my CV.
-
-4. Highlight my relevant projects and technical skills.
-
-5. Create a modern and professional UI.
-
-6. Make the website responsive for desktop, laptop, tablet, and mobile.
-
-7. Use appropriate images and visual elements where they improve the design.
-
-8. Include my relevant professional links.
-
-9. Use clean and maintainable code.
-
-10. Follow semantic HTML and accessibility best practices.
-
-11. Preserve the existing project structure where possible.
-
-12. Do not delete important files.
-
-13. Do not unnecessarily replace working functionality.
-
-14. Explain the proposed implementation plan before making changes.
-
-15. Identify the files that will be created or modified.
-
-First create the implementation plan.
-
-Do not make changes until I approve the plan.
-```
-
-Review the implementation plan carefully.
-
-Check:
-
-* Files to be created
-* Files to be modified
-* Technologies
-* Portfolio sections
-* Design approach
-* Images
-* Responsive approach
-* Navigation
-* Accessibility
-* Existing functionality
-
-If the plan is acceptable, tell Copilot:
-
-```text
-The plan looks good. Proceed with the implementation.
-
-Follow the approved plan and the Portfolio Generation Agent and Skill instructions.
-
-Do not invent information.
-
-Do not delete important files.
-
-Do not unnecessarily remove working functionality.
-```
-
-Copilot will then create or modify the portfolio files.
+![Empty Agent List](/images/empty_agent_list.png)
 
 ---
 
-###  Expected Result
+## Step 03 - Create Your Agent Through the CLI
 
-A functional portfolio website generated from the verified information contained in your CV.
+Press:
 
----
+```text
+n
+```
 
-<a id="step-10---review-the-portfolio"></a>
+This starts the process of creating a new custom Agent.
 
-## Step 10 - Review the Portfolio
+Copilot will ask you for the Agent details.
 
-After the portfolio has been generated, ask Copilot to review it.
+### Agent Scope
+
+Choose the appropriate scope:
+
+> Choose **Project** to make the Agent available within this project, or choose **User** if you prefer to use it across your personal projects.
+
+For this workshop, **Project** is recommended because the Agent is being created for this project.
+
+### Agent Name
 
 Use:
 
 ```text
-Review the portfolio you just created according to the portfolio-generation skill.
-
-Analyze:
-
-- Content accuracy
-- UI/UX
-- Visual hierarchy
-- Typography
-- Spacing
-- Navigation
-- Responsiveness
-- Accessibility
-- Project presentation
-- Mobile layout
-- Code quality
-- HTML quality
-- CSS quality
-- JavaScript quality
-- Broken links
-- Missing assets
-- Console errors
-- Button functionality
-
-Identify the five most important improvements.
-
-Do not make changes yet.
-
-Explain each improvement and why it is needed.
+portfolio-generation
 ```
 
-Review the recommendations before making changes.
+Simply press **Enter** to continue.
+
+### Description
+
+The complete Agent configuration and instructions are available here:
+
+[View Portfolio Generation Agent Description](./resources/Portfolio%20Generation%20Agent/portfolio-generation.agent.md)
+
+### Tool Selection
+
+Select the tools required by the Agent to inspect, search, modify, and test the project.
+
+For the Portfolio Generation Agent, you can keep the default tool access or restrict the available tools according to the requirements of your project.
+
+> 🎉 **Successfully created your custom agent!**
 
 ---
 
-<a id="step-11---improve-the-portfolio"></a>
+## Step 04 - Check the Custom Agent
 
-## Step 11 - Improve the Portfolio
+After creating the Agent, verify that it is available in GitHub Copilot CLI.
 
-After reviewing the recommendations, ask Copilot:
+### 1. Open GitHub Copilot CLI
+
+```powershell
+copilot
+```
+
+### 2. Open the Agent selector
 
 ```text
-Apply the approved improvements.
-
-Requirements:
-
-- Preserve the existing project structure.
-- Do not delete important files.
-- Do not invent information.
-- Preserve working functionality.
-- Follow the portfolio-generation skill.
-- Make targeted improvements without unnecessarily rewriting working code.
-
-After making the changes, verify that the portfolio still works correctly.
+/agent
 ```
 
-Review the changes proposed by Copilot before approving them.
+### 3. Find and select
+
+```text
+portfolio-generation
+```
+
+### 4. Confirm the Agent
+
+Confirm that the **Portfolio Generation** Agent is available and ready to use.
+
+> **Tip:** If the Agent does not appear, restart GitHub Copilot CLI and run `/agent` again.
 
 ---
 
-<a id="step-12---final-testing-and-evidence"></a>
+## Step 05 - Start/Restart GitHub Copilot CLI
 
-## Step 12 - Final Testing and Evidence
+If you created the Agent during the previous session, restart GitHub Copilot CLI so the newly created Agent is loaded.
 
-Before completing the activity, verify the portfolio.
+Run:
+
+```powershell
+copilot
+```
+
+Then open the Agent selector:
+
+```text
+/agent
+```
 
 ---
 
-# 🎓 Learning Outcome
+## Step 06 - Select the Portfolio Generation Agent
 
-After completing this activity, participants should understand how to combine a **custom GitHub Copilot CLI Agent** with a reusable **Skill** to perform a structured AI-assisted development workflow.
+From the `/agent` menu, select:
+
+```text
+portfolio-generation
+```
+
+Confirm that the **Portfolio Generation** Agent is now selected and ready to use.
+
+---
+
+## Step 07 - Provide and Analyze Your CV
+
+Provide your CV or profile information to the Portfolio Generation Agent.
+
+Use a prompt similar to the following:
+
+```text
+Analyze my CV and identify the verified information that can be used to create my personal portfolio.
+
+Do not modify any project files yet.
+
+First, summarize:
+- Personal information
+- About/profile information
+- Education
+- Skills
+- Projects
+- Experience
+- Certifications
+- Achievements
+- Community activities
+- Contact information
+
+Do not invent or assume any information that is not provided in my CV.
+```
+
+Review the information identified by the Agent.
+
+Make sure the extracted information is accurate before continuing.
+
+---
+
+## Step 08 - Generate the Portfolio
+
+After verifying the CV information, ask the Agent to create the portfolio.
+
+Use a prompt similar to the following:
+
+```text
+Create my personal portfolio using the verified information from my CV.
+
+Use the supplied visual reference as design inspiration only.
+
+Create a professional, responsive, and accessible portfolio while preserving the existing project structure and technology stack.
+
+Do not invent any information.
+
+Before making file changes, provide an implementation plan for review.
+```
+
+Review the implementation plan provided by the Agent.
+
+After reviewing the plan, approve the changes so the Agent can implement the portfolio.
+
+---
+
+## Step 09 - Review the Portfolio
+
+After the portfolio has been generated, ask the Agent to review the implementation.
+
+Use a prompt similar to the following:
+
+```text
+Review the generated portfolio.
+
+Check:
+- Content accuracy
+- Responsive design
+- Visual hierarchy
+- Layout and spacing
+- Accessibility
+- Navigation
+- Mobile responsiveness
+- Typography
+- Image usage
+- Overall consistency
+
+Identify the most important improvements that could be made.
+
+Do not make changes yet.
+```
+
+Review the feedback provided by the Agent.
+
+At this stage, you can discuss the suggested improvements with the Agent and decide which changes you want to make.
+
+---
+
+# 🎉 Activity Completed
+
+Congratulations! You have successfully created and used a custom **Portfolio Generation Agent** with **GitHub Copilot CLI**.
+
+You have learned how to:
+
+* Create a custom Copilot CLI Agent
+* Configure an Agent for a specific task
+* Select and use a custom Agent
+* Analyze verified CV information
+* Generate a professional portfolio
+* Review an AI-generated website
+* Work safely with AI-assisted development
